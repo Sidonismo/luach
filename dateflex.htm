@@ -1,0 +1,105 @@
+<html style=""><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Flexcal by dwachss</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="stylesheets/prism-dw.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/dwachss/flexcal/d6ba968ddf39f5848ac63d4dfa7416f06c091231/flexcal.css"></head>
+    <script src="javascripts/scale.fix.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script src="https://cdn.rawgit.com/dwachss/prism/gh-pages/prism.js"></script>
+	<script src="https://cdn.rawgit.com/dwachss/flexcal/v2.2/jquery.calendars.picker-mock.js"></script>
+	<script src="https://cdn.rawgit.com/dwachss/calendars/master/jquery.calendars.js"></script>
+	<script src="https://cdn.rawgit.com/dwachss/calendars/master/jquery.calendars-ar.js"></script>
+	<script src="https://cdn.rawgit.com/dwachss/calendars/master/jquery.calendars.islamic.js"></script>
+	<script src="https://cdn.rawgit.com/dwachss/calendars/master/jquery.calendars.islamic-ar.js"></script>
+	<script src="https://cdn.rawgit.com/dwachss/calendars/master/jquery.calendars.picker-ar.js"></script>
+    <script src="javascripts/prism.linenumber.js"></script>
+	<script src="loadflexcal.js"></script>
+<script>
+$(function () { $('#date3').flexcal({
+  position: 'bl',
+  calendars: ['en', 'jewish', 'he-jewish'],
+  'class': 'multicalendar'
+}); });
+</script>
+</head>
+<body>
+<div class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-datepicker ui-flexcal">
+<style type="text/css">
+	.ui-flexcal-container {
+		position: relative;
+		overflow: hidden;
+	}
+  .ui-flexcal-pane {
+    position: absolute;
+		left: 0em; /* IE seems to require this, as its left: auto centers it */
+  }
+	.ui-flexcal .ui-tabs-nav {
+		margin-bottom: 0.2em !important;
+	}
+  .ui-flexcal.ui-tabs .ui-tabs-nav li a {
+    padding: 0.1em 1em; /* tabs should be smaller */
+  }
+	.ui-tabs-selected a:hover { /* any other stylesheet that styles a's needs to be overridden */
+		border: none !important;
+		color: inherit !important;
+	}
+	.ui-flexcal.ui-datepicker table {
+		width: auto !important;
+		position: absolute; /* for accurate width measurements */
+		left: 0;
+	}
+	.ui-flexcal.ui-datepicker th {
+		padding: 0.1em 0.3em !important;
+	}
+	.ui-flexcal.ui-datepicker {
+		width: auto !important;
+		display: block !important; /* the 1.9 UI has a display: none; we don't want that */
+	}
+  .ui-flexcal.ui-datepicker table caption {
+    font-size: 1.2em;
+  }
+	.ui-flexcal.ui-datepicker table td {
+		width: 2em;
+	}
+	.multicalendar .ui-flexcal.ui-datepicker table td { /* bigger calendar boxes with room for more tabs on top */
+		width: 3.5em;
+	}
+	.ui-flexcal.ui-datepicker td a.ui-state-disabled {
+		border: 1px solid transparent; /* to keep the boxes the same size as the active ones */
+	}
+  .ui-flexcal .go {
+    z-index: 1;
+    font-size: 0.85em;
+  }
+	.ui-flexcal .go.ui-state-hover {
+		top: 1px;
+	}
+	.ui-flexcal .go.ui-state-hover.ui-datepicker-prev {
+		left: 1px;
+	}
+	.ui-flexcal .go.ui-state-hover.ui-datepicker-next {
+		right: 1px;
+	}
+	.ui-state-hover {
+		cursor: pointer;
+	}
+  </style>
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+	</ul>
+	<div class="ui-flexcal-container">
+		<div class="ui-flexcal-pane">
+		</div>
+		<div class="ui-flexcal-pane">
+		</div>
+	</div>
+<input id="date3" type="text" />
+</div>
+
+
+</body>
+</html>

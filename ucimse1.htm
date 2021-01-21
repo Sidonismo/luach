@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Příklad Datepicker vs Flexcal
+    </title>
+    <link href="normalizace.css" rel="stylesheet" type="text/css">
+    <link href="pokus.css" rel="stylesheet" type="text/css">
+    <script src="jquery_js_css/jquery-2.1.4.js">
+    </script>
+    <script>
+    $( document ).ready(function() {
+    $('#selected-plays > li').addClass('horizontal');
+    $('#selected-plays li:not(.horizontal)').addClass('sub-level');
+    });
+    </script>
+  </head>
+  <body>
+    <ul id="selected-plays" class="clear-after">
+      <li>Pellentesque
+        <ul>
+          <li>habitant morbi tristique senectus
+          </li>
+          <li>et netus
+          </li>
+          <li>et malesuada fames ac turpis egestas.
+          </li>
+          <li>Vestibulum
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>tortorquam
+        <ul>
+          <li>feugiat vitae
+          </li>
+          <li>ultricies eget, tempor
+          </li>
+          <li>sit amet, ante.
+          </li>
+          <li>Donec
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>euliberosit
+        <ul>
+          <li>amet quam
+          </li>
+          <li>egestas semper
+          </li>
+          <li>Aenean
+          </li>
+          <li>ultricies mi vitae ests
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

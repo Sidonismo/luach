@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Příklad Datepicker vs Flexcal </title>
+
+  <link rel="stylesheet" href="jquery_js_css/jquery-ui.css"> <!-- pro flex i pick -->
+  <link rel="stylesheet" href="flexcal_min_js_css/flexcal.css"> <!-- pro flex -->
+  
+  <script src="jquery_js_css/jquery-1.11.2.js"></script> <!-- pro flex i pick, starší verze jquery dle stránek s příkladem, s novou nezkoušel -->
+  <script src="jquery_js_css/jquery-ui.js"></script> <!-- pro flex i pick --> 
+  <script src="flexcal_min_js_css/jquery.textpopup.js"></script>  <!-- pro flex, zachovat toto pořadí načítání - nejdřív textpopup -->
+  <script src="flexcal_min_js_css/jquery.flexcal.js"></script>  <!-- pro flex, zachovat pořadí toto pořadí načítání -->
+  
+  
+  <script>
+  $( document ).ready(function() {
+
+        $('#pick2').datepicker();
+
+        $('#flex3').flexcal({
+        position: 'bl',
+        calendars: ['en', 'jewish', 'he-jewish']
+        });
+
+    });
+    </script>
+
+</head>
+<body>
+ 
+<p>Date pick: <input type="text" id="pick2"></p>
+<p>Date flex: <input type="text" id="flex3"></p>
+ 
+</body>
+</html>
